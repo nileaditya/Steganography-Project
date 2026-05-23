@@ -27,17 +27,18 @@ This tool was built to demonstrate advanced understanding of **Bitwise Operation
 ```bash
    git clone [https://github.com/nileaditya/Steganography-Project.git](https://github.com/nileaditya/Steganography-Project.git)
    cd Steganography-Project
-
+```
 2. Create and activate a virtual environment:
 ```bash
    python -m venv venv
    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-
+```
 3. Install dependencies:
 ```bash
    pip install -r requirements.txt
-
+```
 4. Start the server:
 ```bash
    python app.py
+```
 Open http://127.0.0.1:5000 in your browser.
