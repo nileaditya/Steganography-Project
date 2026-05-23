@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steganography Engine</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🔒 AES-256 Steganography</h1>
+
+        <form action="/encode" method="POST" enctype="multipart/form-data">
+            <h2 style="color: #e0e0e0; font-size: 1.2rem; margin-top: 0;">Hide a Message</h2>
+            
+            <label for="image">Upload Cover Image (.png recommended)</label>
+            <input type="file" name="image" accept="image/*" required>
+
+            <label for="message">Secret Message</label>
+            <textarea name="message" placeholder="Type the text you want to hide..." required></textarea>
+
+            <label for="password">Encryption Password</label>
+            <input type="password" name="password" placeholder="e.g., SuperSecret123" required>
+
+            <button type="submit">Encrypt & Hide</button>
+        </form>
+
+        <form action="/decode" method="POST" enctype="multipart/form-data">
+            <h2 style="color: #e0e0e0; font-size: 1.2rem; margin-top: 0;">Extract a Message</h2>
+            
+            <label for="stego_image">Upload Encoded Image</label>
+            <input type="file" name="stego_image" accept="image/*" required>
+
+            <label for="password">Decryption Password</label>
+            <input type="password" name="password" placeholder="Enter password to unlock..." required>
+
+            <button type="submit">Extract & Decrypt</button>
+        </form>
+    </div>
+</body>
+</html>     
